@@ -1,18 +1,20 @@
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.layout.GridPane?>
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.text.Text?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.ColumnConstraints?>
 <GridPane fx:controller="sample.Controller"
           xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10"
           styleClass="background">
-    <Label styleClass="label-header" fx:id="headerText" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <Label styleClass="label-header" GridPane.rowIndex="0" GridPane.columnIndex="0" fx:id="gameResultLabel"/>
     <Label styleClass="label-bright" text="Cards number" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
-    <TextField GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <TextField GridPane.rowIndex="2" GridPane.columnIndex="0" fx:id="cardsNumberField"/>
     <HBox alignment="BOTTOM_RIGHT" GridPane.rowIndex="3" GridPane.columnIndex="0">
-        <Button text="confirm"/>
+        <Button text="Confirm" onAction="#handleSubmitButtonAction" fx:id="confirmButton"/>
     </HBox>
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" percentWidth="35.0"/>
+    </columnConstraints>
 </GridPane>

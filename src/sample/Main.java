@@ -7,9 +7,11 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+/**This class provides methods for GUI launching.*/
 public class Main extends Application {
 
     @Override
+    /**Creating GUI.*/
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("CardGame");
@@ -20,7 +22,7 @@ public class Main extends Application {
         primaryStage.show();
     }
 
-
+    /**Launching GUI.*/
     public static void main(String[] args) {
         launch(args);
     }
